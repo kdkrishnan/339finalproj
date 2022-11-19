@@ -1,0 +1,168 @@
+html{
+    scroll-behavior: smooth;
+  }
+  
+  body{
+    background-color: #737373;
+    font-size: 18px;
+    line-height: 1.15;
+    margin: 0;
+    padding: 0;
+  }
+  
+  
+  .overview{
+    background-attachment: fixed; /* Parallax effect */     
+    background-position: center;  /* Parallax effect */
+    background-repeat: no-repeat; /* Parallax effect */
+    background-size: cover;       /* Parallax effect */
+    color: white;
+    height: 400px;                /* Parallax effect */
+  }
+  
+  
+  .overview p{
+    color: white;
+    font-size: 24px;
+    padding: 0 100px;
+    text-align: center;
+  }
+  
+  h1{
+    font-size: 50px;
+    line-height: 1;
+    padding: 50px 0;
+    text-align: center;
+  }
+  
+  h2{
+    font-size: 32px;
+    line-height: 1.5;
+  }
+  
+  nav li{
+    display:inline;
+    padding-right:20px;
+  
+  }
+  
+  nav a{
+    color: black;
+    font-weight: bold;
+    text-decoration: none; 
+  }
+  
+  
+  .skip a{
+    background: white;
+    left: 0;
+    padding: 6px;
+    -webkit-transition: top 1s ease-out;
+    transition: top 1s ease-out;
+    z-index: 1;
+  }
+  
+  
+  nav{
+    background-color: #ddd;
+    padding: 25px 0; 
+    text-align: left;
+  }
+  
+  footer{
+    background-color: black;
+    color: white;
+    padding-top: 30px;
+    text-align: center;
+  }
+  
+  
+  .text-block{
+    background-color: rgba(255, 255, 255, .8);
+    border: 10px solid black;
+    padding: 30px;
+  }
+  
+  
+  @media screen and (prefers-reduced-motion: reduce){
+    html{
+        scroll-behavior: auto; /* Removes scroll animation */
+    }
+  
+    .skip a{
+      -webkit-transition: none; /* sets to default setting */
+      transition: none;        /* sets to default setting */
+     }
+  
+    /*Turn off parallax*/
+    header{
+      background-attachment: initial;
+    }
+  }
+  
+  
+  
+  
+  /* Selector/rule property to add an underline when links in the navigation are in the hover or focus state.*/
+  nav a:hover, nav a:focus{
+    text-decoration: underline;
+  }
+  
+  /* Selector/rule property to position the default position for the skip class element*/
+  .skip a{
+    position: absolute;
+    top: -40px;
+  }
+  
+  /* Selector/rule property to position the skip class element when it is in focus*/
+  .skip a:focus{
+    top: 20px;
+  }
+  
+  /* Selector/rule property to style all elements when in focus*/
+  :focus{
+    border: 2px solid;
+  } 
+  
+  /* Step 4: Write selector/rule property to style the container */
+.gridcontain{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  row-gap: 15px;
+}
+
+.zing, .earle, .taste, .afternoon, .fritas{
+  grid-column: 2 / span 1; 
+}
+.rice, .aventura, .zola, .avalon{
+  grid-column:  4/ span 1; 
+}
+
+.zing{grid-row: 1;}
+.rice{grid-row: 1;}
+.earle{grid-row: 2;}
+.aventura{grid-row: 2;}
+.taste{grid-row: 3;}
+.zola{grid-row: 3;}
+.afternoon{grid-row: 4;}
+.avalon{grid-row: 4;}
+.fritas{grid-row: 5;}
+
+.zing-image{grid-row: 1;}
+.rice-image{grid-row: 1;}
+.earle-image{grid-row: 2;}
+.aventura-image{grid-row: 2;}
+.taste-image{grid-row: 3;}
+.zola-image{grid-row: 3;}
+.afternoon-image{grid-row: 4;}
+.avalon-image{grid-row: 4;}
+.fritas-image{grid-row: 5;}
+  
+.zing-image, .rice-image, .earle-image, .aventura-image, .taste-image, .zola-image, .afternoon-image, .avalon-image, .fritas-image{
+  height: 400px;
+  overflow: hidden;
+}  
+
+.zing-image, .earle-image, .taste-image, .afternoon-image, .fritas-image{
+  grid-column: 1;
+}  
