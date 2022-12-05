@@ -1,7 +1,3 @@
-html{
-  scroll-behavior: smooth;
-}
-  
 body{
   background-color: lightgray;
   font-size: 18px;
@@ -64,7 +60,18 @@ li{
     text-align: center;
   }
 }
-
+@media screen and (min-width: 900px){
+  nav ul{
+    display: flex;
+    flex-direction: row;
+    align-content: space-around;
+    justify-content:space-around;
+  }
+  nav{
+    text-align: center;
+    justify-content:space-around;
+  }
+}
 
 .skip a{
   background: white;
@@ -330,4 +337,11 @@ img{
   .about > h2{
     padding: 5px;
   }
+}
+@media screen and (prefers-reduced-motion: reduce){
+
+  .skip a{
+    -webkit-transition: none; /* sets to default setting */
+    transition: none;        /* sets to default setting */
+   }
 }
